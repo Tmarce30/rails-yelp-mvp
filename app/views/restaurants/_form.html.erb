@@ -1,0 +1,17 @@
+<%= form_for(@restaurant) do |f| %>
+  <% if @restaurant.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :title %>
+    <%= f.label :content   %>
+    <%= f.text_field :content  %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
